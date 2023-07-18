@@ -1,0 +1,32 @@
+Installation and Dependency Management
+
+To install and set up the ChatGPT AI-powered software development program, follow these steps:
+
+    Clone or download the program repository from the project's GitHub page.
+
+    Ensure that Python 3.x is installed on your system.
+
+    Create a virtual environment to isolate the program's dependencies using the following command:
+
+python3 -m venv myenv
+
+Activate the virtual environment. In Linux, use the command:
+
+bash
+
+source myenv/bin/activate
+
+
+
+Troubleshooting and Error Resolution
+
+    If you encounter an error related to the Flask module, ensure that Flask is installed in your virtual environment. You can install Flask using the command pip install flask.
+
+    If the error persists, check if you have activated the virtual environment correctly before running the program.
+
+    If you receive an API-related error, ensure that you have obtained a valid API key from OpenAI and configured it correctly in the program. Double-check the API key and make sure it is correctly assigned to the OPENAI_API_KEY environment variable.
+
+    If the issue persists, review the OpenAI API documentation and troubleshooting guides for further assistance.
+
+    Additionally, ensure that you have an active internet connection to communicate with the OpenAI API.
+

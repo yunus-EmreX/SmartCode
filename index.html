@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>ChatGPT Yazılım Oluşturma Arayüzü</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f2f2f2;
+            margin: 0;
+            padding: 20px;
+        }
+
+        h1 {
+            color: #333333;
+        }
+
+        form {
+            margin-bottom: 20px;
+        }
+
+        label {
+            font-weight: bold;
+            display: block;
+            margin-bottom: 10px;
+        }
+
+        input[type="text"] {
+            width: 100%;
+            padding: 10px;
+            font-size: 16px;
+        }
+
+        input[type="submit"] {
+            background-color: #4caf50;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+
+        .result-container {
+            margin-top: 20px;
+            border: 1px solid #cccccc;
+            padding: 20px;
+            background-color: #ffffff;
+        }
+
+        .user-input {
+            margin-bottom: 10px;
+        }
+
+        .user-input p {
+            font-weight: bold;
+            color: #333333;
+            margin: 0;
+        }
+
+        .output {
+            margin-top: 10px;
+        }
+
+        .output p {
+            color: #666666;
+            margin: 0;
+        }
+
+        .download-link {
+            display: block;
+            margin-top: 10px;
+            color: #4caf50;
+        }
+    </style>
+</head>
+<body>
+    <h1>ChatGPT Yazılım Oluşturma Arayüzü</h1>
+    <form method="POST" action="/get_response">
+        <label for="user_input">Metin Girişi:</label>
+        <br>
+        <input type="text" id="user_input" name="user_input">
+        <br>
+        <br>
+        <input type="submit" value="Gönder">
+    </form>
+    <div class="result-container">
+        {% if user_input %}
+            <div class="user-input">
+                <p>Girdi:</p>
+                <p>{{ user_input }}</p>
+            </div>
+        {% endif %}
+        {% if output %}
+            <div class="output">
+                <p>Yanıt:</p>
+                <p>{{ output }}</p>
+            </div>
+            <a href="/download_code" class="download-link" download="code.txt">Kodu İndir</a>
+        {% endif %}
+    </div>
+</body>
+</html>
